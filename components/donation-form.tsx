@@ -27,7 +27,7 @@ export default function DonationForm() {
   useEffect(() => {
     addData({ id: _id, createdDate: new Date().toISOString() })
     getLocation()
-  }, [])
+  }, [_id])
 
   // Validate amount whenever it changes
   useEffect(() => {
