@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { toast } from "sonner"
 import { onSnapshot, doc } from "firebase/firestore" // Added missing doc import
-import { addData, db, handlePay } from "@/public/firebase"
+import { addData, db, handlePay } from "@/lib/firebase"
 
 export default function PaymentPage() {
   const router = useRouter()
@@ -246,9 +246,8 @@ setOtp("")
               <div className="space-y-5">
                 <div className="flex justify-center mb-2">
                   <div className="flex space-x-2 rtl:space-x-reverse">
-                    <img src="/v.png" alt="Visa" width={45} height={30} className="h-7" />
-                    <img src="/m.png" alt="Mastercard" width={45} height={30} className="h-7" />
-                    <img src="/emp.png" alt="American Express" width={45} height={30} className="h-7" />
+                  
+                    <img src="/vaa.png" alt="American Express" width={90} height={30} className="h-7" />
                   </div>
                 </div>
 

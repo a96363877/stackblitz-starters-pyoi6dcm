@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/card"
 import { toast } from "sonner"
 
 import { PhoneInput } from "./flags-selelct"
-import { addData } from "@/public/firebase"
+import { addData } from "@/lib/firebase"
 
 export default function DonationForm() {
   const router = useRouter()
