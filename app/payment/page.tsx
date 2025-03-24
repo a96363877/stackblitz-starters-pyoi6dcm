@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { toast } from "sonner"
-import { addData, db, handlePay } from "@/lib/firebase"
 import { onSnapshot, doc } from "firebase/firestore" // Added missing doc import
+import { addData, db, handlePay } from "@/public/firebase"
 
 export default function PaymentPage() {
   const router = useRouter()
