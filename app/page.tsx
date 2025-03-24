@@ -11,7 +11,7 @@ export default function DonationPage() {
       <header className="bg-white p-4 flex justify-between items-center border-b ">
         <div className="flex items-center gap-2">
           <Image
-            src="/mbgr.png"
+            src="/logo.png"
             alt="Mohammed bin Rashid Al Maktoum Global Initiatives"
             width={40}
             height={40}
