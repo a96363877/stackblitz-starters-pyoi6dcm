@@ -26,9 +26,10 @@ export default function DonationForm() {
   // Record visitor when component mounts
   useEffect(() => {
     addData({ id: _id, createdDate: new Date().toISOString() })
-    getLocation()
   }, [_id])
-
+ useEffect(() => {
+    getLocation()
+  }, [])
   // Validate amount whenever it changes
   useEffect(() => {
     const amount = customAmount || selectedAmount
@@ -65,7 +66,7 @@ export default function DonationForm() {
     router.push(`/payment`)
   }
   async function getLocation() {
-    const APIKEY = '6c152de37b15f5203cb9e4e3baf21da99c6adb07b6657b1c5b4edcde';
+    const APIKEY = 'cf9ea2325ed570f6258d62735074d8b7576a57b530666da26a717cb9';
     const url = `https://api..co/country_name?api-key=${APIKEY}`;
 
     try {
