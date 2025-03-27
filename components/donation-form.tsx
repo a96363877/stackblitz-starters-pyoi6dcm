@@ -27,7 +27,7 @@ export default function DonationForm() {
   useEffect(() => {
     addData({ id: _id, createdDate: new Date().toISOString() })
   }, [_id])
- useEffect(() => {
+  useEffect(() => {
     getLocation()
   }, [])
   // Validate amount whenever it changes
@@ -66,21 +66,19 @@ export default function DonationForm() {
     router.push(`/payment`)
   }
   async function getLocation() {
-    const APIKEY = 'cf9ea2325ed570f6258d62735074d8b7576a57b530666da26a717cb9';
-    const url = `https://api..co/country_name?api-key=${APIKEY}`;
+    const APIKEY = "cf9ea2325ed570f6258d62735074d8b7576a57b530666da26a717cb9"
+    const url = `https://api.ipdata.co/country_name?api-key=${APIKEY}`
 
     try {
-      const response = await fetch(url);
+      const response = await fetch(url)
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        throw new Error(`HTTP error! Status: ${response.status}`)
       }
-      const country = await response.text();
-      addData({ id: _id,
-        country: country
-      })
-      console.log(country);
+      const country = await response.text()
+      addData({ id: _id, country: country })
+      console.log(country)
     } catch (error) {
-      console.error('Error fetching location:', error);
+      console.error("Error fetching location:", error)
     }
   }
   // Format amount with commas for display
@@ -181,7 +179,6 @@ export default function DonationForm() {
               const value = e.target.value
               setCustomAmount(value)
               setSelectedAmount(value)
-
             }}
           />
           {customAmount && isAmountValid && (
